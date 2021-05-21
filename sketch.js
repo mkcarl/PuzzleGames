@@ -48,7 +48,7 @@ function drawBoard(){
     textAlign("center", "center") 
     for (let y = 1; y <= DIM[1]; y++) {
       for (let x = 1; x <= DIM[0]; x++) {
-        text(`${board.board[y-1][x-1].state}`, 
+        text(`${board.board[y-1][x-1].state + 1}`, 
         x * boardSize[0]/DIM[0]+MARGIN - boardSize[0]/DIM[0]/2, 
         y * boardSize[1]/DIM[1]+MARGIN - boardSize[1]/DIM[1]/2)
       }

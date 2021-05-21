@@ -1,6 +1,7 @@
 import random
 from typing import get_type_hints
 import copy
+from pprint import pprint
 
 
 class Arrow:
@@ -88,7 +89,7 @@ class ArrowBoardSolver:
     def __init__(self, board) :
         self.arrow_board = copy.deepcopy(board)
     
-    def solve(self, shape, verbose) -> list: 
+    def solve(self, shape) -> list: 
         if list(shape) == [4, 4]: 
             steps= []
                 
@@ -129,8 +130,6 @@ class ArrowBoardSolver:
                             right_corner = self.arrow_board.board[rowNum][3].state  
                             steps.append(target.position)
                     
-                    if verbose: 
-                        print(self.arrow_board.print_board(False))
 
                 # left side 
                 center_tile = self.arrow_board.board[3][1]
@@ -184,14 +183,21 @@ class ArrowBoardSolver:
 
 
 if __name__ == '__main__':
-    b = ArrowBoard(4,4)
+    b = ArrowBoard(4,4, 
+        [[1, 0, 1, 2],
+        [2, 2, 3, 0],
+        [0, 1, 2, 1],
+        [3, 1, 1, 2]]
+        )
     s = ArrowBoardSolver(b)
-    steps = s.solve([4,4], False)
+    steps = s.solve([4,4])
+    pprint(s.arrow_board.board)
     print(steps)
-    # while True:
+    while True:
     #     b.print_board(False)
     #     if b.check_solved():
     #         print("You won!")
     #         break
-    #     piece = input("Which piece : ").replace(" ", "").split(",")
-    #     b.rotate_piece(int(piece[0]), int(piece[1]))
+        piece = input("Which piece : ").replace(" ", "").split(",")
+        pprint(b.board)
+        b.rotate_piece(int(piece[0]), int(piece[1]))
