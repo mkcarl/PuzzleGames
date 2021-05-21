@@ -19,5 +19,5 @@ This project is intended for educational purposes only.
 
 [1]: https://cdn.discordapp.com/attachments/733404697637027854/823042433414594590/Complete_Arrow_Guide_Eaux.pdf
 [2]: https://cdn.discordapp.com/attachments/766342365991927818/845289598125211698/unknown.png
-[3]: https://cdn.discordapp.com/attachments/792733041478860801/845284277914042368/2021-05-21_20-52-39_Trim.mp4
+[3]: https://www.youtube.com/watch?v=kFycY4QL9gQ
 [4]: https://github.com/mkcarl/PuzzleGames/blob/main/LICENSE
